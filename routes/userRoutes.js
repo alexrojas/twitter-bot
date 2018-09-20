@@ -45,7 +45,7 @@ router.get('/login', (req, res, next) => {
 
 router.get('/auth/twitter', passport.authenticate('twitter'));
 
-router.get("/signup/twitter/return", passport.authenticate("twitter", {
+router.get("https://twit-bot-1.herokuapp.com/signup/twitter/return", passport.authenticate("twitter", {
     failureRedirect: "/"
   }),
   function(req, res) {

@@ -71,7 +71,7 @@ passport.deserializeUser((id, cb) => {
 passport.use(new TwitterStrategy({
   consumerKey: process.env.TWITTERKEY,
   consumerSecret: process.env.TWITTERSECRET,
-  callbackURL: "http://localhost:3000/signup/twitter/return"
+  callbackURL: process.env.CALLBACK
 },(accessToken, tokenSecret, profile, done) => {
   // console.log(">>>>this is the profile", profile)
 var modifedImage = ""

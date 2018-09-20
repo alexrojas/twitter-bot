@@ -1,0 +1,129 @@
+<!-- <h1>Welcome {{user.displayName}}</h1> -->
+
+
+<div class="secondfix">
+
+  <div class="card mb-3 text-center hoverable profile1">
+    <div class="card-body card-shadow">
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-4 offset-md-1 mx-3 my-3">
+          <!--Featured image-->
+          <div class="view overlay">
+            <img src="{{userImage}}" class="img-fluid" alt="Sample image for first version of blog listing">
+
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-7 text-left ml-3 mt-3">
+          <!--Excerpt-->
+          <a target="_blank" href="https://twitter.com/{{user.twitterUsername}}" class="green-text">
+            <h4 class="font-bold pb-1"><i class="fa fa-desktop"></i> @{{user.twitterUsername}}   <img src="../images/twitter_logo_t.png" class="twitterLogo"alt=""> </h4>
+          </a>
+          <h1 class="mb-1"><strong> {{user.displayName}}</strong></h1>
+
+          <h3 class="font-weight-bold indigo-text py-2 descip1" >Status:  "<b>{{user.description}}"</b></h3>
+          <hr>
+
+
+          <div class="options1">
+
+            <form class="" action="/search/user"  method="get">
+              <label for="name">Twitter Name @</label>
+              <input type="text" name="name" value="">
+              <button class="submitButton btn btn-success secondButton" onClick="showDiv()" >Submit </button>
+              <button type="button" class="btn btn-primary modal1" data-toggle="modal" data-target="#basicExampleModal">
+                See Results
+              </button>
+            </form>
+
+          </div>
+
+            <p>by <a><strong>Tweet-Bot: </strong></a> {{dateCreated}}</p>
+        </div>
+        <!-- <div class="options1">
+
+          <form class="" action="/search/user"  method="get">
+            <label for="name">Twitter Name @</label>
+            <input type="text" name="name" value="">
+            <button class="submitButton btn btn-success secondButton" onClick="showDiv()" >Submit </button>
+          </form>
+          <span><button type="button" class="btn btn-primary modal1" data-toggle="modal" data-target="#basicExampleModal">
+            Check Results
+          </button></span>
+        </div> -->
+
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+  </div>
+
+</div>
+
+<!--
+<div class="cards-container movieContainer carajo" >
+  <div class="card" style="width: 30%;">
+    <img class="card-img-top" src="{{myResponse.image2}}" alt="Card image cap">
+
+    <div class="card-body">
+      <h5 class="card-title">Name: {{myResponse.name}} </h5>
+      <h4 class="card-text">Total Followers: {{myResponse.followers}}</h4>
+      <h4 class="card-text">Total Status: {{myResponse.statuses}}</h4>
+
+       <a class="btn btn-primary" href="/profile/:id">Back to Profile</a>
+
+       <form class="" action="/profile/edit" method="post">
+
+         <div class="custom-control custom-checkbox">
+           <input type="hidden" type="text" name="twitterId" value="{{myResponse.twitterId}}">
+           <input type="checkbox" name="checked" class="custom-control-input" id="defaultUnchecked">
+           <label class="custom-control-label" for="defaultUnchecked">Stalking Mode</label>
+           <button>Send</button>
+         </div>
+       </form>
+
+    </div>
+  </div>
+</div> -->
+
+<!-- <button type="button" class="btn btn-primary modal1" data-toggle="modal" data-target="#basicExampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title " id="exampleModalLabel">Name: {{myResponse.name}}</h2>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="card-img-top" src="{{myResponse.image2}}" alt="Card image cap">
+
+        <h5 class="card-text">Total Followers: {{myResponse.followers}}</h5>
+        <h5 class="card-text">Total Status: {{myResponse.statuses}}</h5>
+      </div>
+      <form class="" action="/profile/edit" method="post">
+
+        <div class="custom-control custom-checkbox">
+          <input type="hidden" type="text" name="twitterId" value="{{myResponse.twitterId}}">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button class="btn btn-primary">Stalking Mode</button>
+        </div>
+      </form>
+      <br>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<h1>new page</h1>
+
+<form class="" action="/signup" method="post">
+
+  <!-- <label for="username">Twitter Username:</label>
+  <input placeholder="John Doe" type="text" name="username" value="">
+
+  <br><br>
+
+  <label for="password">Password:</label>
+  <input type="text" placeholder="passowrd" name="password" value="">
+
+  <br><br> -->
+
+  <label for="email">Phone Number:</label>
+  <input type="text" placeholder="xxx-xxx-xxxx" name="phone" value="">
+
+{{#if errorMessage }}
+  <div class="error-message">{{ errorMessage }}</div>
+{{/if}}
+
+
+
+  <button>Create account</button>
+
+</form>
+
+<a href="/auth/twitter">Sign in with Twitter</a>

@@ -1,0 +1,48 @@
+<h1>Friends Page</h1>
+<!-- {{#each myResponse}}
+  {{this.name}}
+{{/each}} -->
+
+<div class="cards-container movieContainer">
+  <div class="card" style="width: 30%;">
+    <img class="card-img-top" src="{{myResponse.image2}}" alt="Card image cap">
+    <!-- <img class="cloudImg" src="{{ this.path }}" alt="{{ this.originalName }}" /> -->
+    <div class="card-body">
+      <h5 class="card-title">Name: {{myResponse.name}} </h5>
+      <h4 class="card-text">Total Followers: {{myResponse.followers}}</h4>
+      <h4 class="card-text">Total Status: {{myResponse.statuses}}</h4>
+
+       <a class="btn btn-primary" href="/profile/:id">Back to Profile</a>
+
+       <form class="" action="/profile/edit" method="post">
+
+         <div class="custom-control custom-checkbox">
+           <input type="hidden" type="text" name="twitterId" value="{{myResponse.twitterId}}">
+           <input type="checkbox" name="checked" class="custom-control-input" id="defaultUnchecked">
+           <label class="custom-control-label" for="defaultUnchecked">Stalking Mode</label>
+           <button>Send</button>
+         </div>
+       </form>
+
+       <!-- <a class="btn btn-info" href="/profile/:id">Stalking Mode </a> -->
+      <!-- <a class="btn btn-danger" href="/celebrities/{{this.id}}/delete">Delete</a>
+      <a class="btn btn-warning" href="/celebrities/{{this.id}}/edit">Update </a>  -->
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="card" style="width: 33.333%;">
+      <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+      <img class="cloudImg" src="{{ this.path }}" alt="{{ this.originalName }}" />
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}} </h5>
+        <p class="card-text">{{this.catchPhrase}}</p>
+
+        <a class="btn btn-primary" href="/celebrities/{{this.id}}">Movie Info</a>
+        <a class="btn btn-danger" href="/celebrities/{{this.id}}/delete">Delete</a>
+        <a class="btn btn-warning" href="/celebrities/{{this.id}}/edit">Update </a>
+      </div>
+</div> -->

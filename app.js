@@ -10,7 +10,7 @@ const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
 const passport = require('passport')
-const User = require('./models/User')
+const User = require('./models/user')
 const TwitterStrategy = require('passport-twitter').Strategy
 
 const LocalStrategy = require("passport-local").Strategy;

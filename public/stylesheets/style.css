@@ -91,17 +91,28 @@ a {
   align-items: center; }
 
 .footer1 {
-  background-color: #508ae2; }
+  background-color: #508ae2;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
 
 .copyr {
   color: white; }
 
 .firstimage {
   background-size: cover;
-  height: 85vh;
+  height: 88vh;
   background-position: center; }
 
 .secondfix {
   margin-bottom: 34vh; }
+
+.nicebutton {
+  padding: 14px; }
+
+.clickMe {
+  margin-top: 5vh;
+  font-size: 30px; }
 
 /*# sourceMappingURL=style.css.map */

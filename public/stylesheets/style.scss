@@ -133,6 +133,10 @@ a {
 
 .footer1 {
   background-color: #508ae2;
+  display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   // margin-top: 34vh;
 }
 
@@ -142,7 +146,7 @@ a {
 
 .firstimage {
   background-size: cover;
-  height: 85vh;
+  height: 88vh;
   // background-image: url("https://mdbootstrap.com/img/Photos/Others/gradient1.jpg");
   background-position: center;
 }
@@ -150,4 +154,13 @@ a {
 .secondfix{
   margin-bottom: 34vh;
   // margin-top: 34vh;
+}
+
+.nicebutton{
+  padding: 14px
+}
+
+.clickMe{
+  margin-top: 5vh;
+  font-size: 30px
 }
